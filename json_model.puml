@@ -2,7 +2,9 @@
 skinparam classAttributeIconSize 0
 
 ' Classe base
-abstract class JsonValue
+abstract class JsonValue {
+  + toJsonString(): String
+}
 
 ' Tipos simples
 class JsonString {
