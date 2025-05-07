@@ -1,0 +1,41 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' Classe base
+abstract class JsonValue
+
+' Tipos simples
+class JsonString {
+  - value: String
+}
+class JsonNumber {
+  - value: Number
+}
+class JsonBoolean {
+  - value: Boolean
+}
+class JsonNull {
+  <<singleton>>
+}
+
+' Tipos compostos
+class JsonArray {
+  - elements: List<JsonValue>
+  + map(transform: (JsonValue) -> JsonValue): JsonArray
+  + filter(predicate: (JsonValue) -> Boolean): JsonArray
+}
+
+class JsonObject {
+  - properties: Map<String, JsonValue>
+  + filter(predicate: (String, JsonValue) -> Boolean): JsonObject
+}
+
+' Ligações de herança
+JsonString --|> JsonValue
+JsonNumber --|> JsonValue
+JsonBoolean --|> JsonValue
+JsonNull --|> JsonValue
+JsonArray --|> JsonValue
+JsonObject --|> JsonValue
+
+@enduml
