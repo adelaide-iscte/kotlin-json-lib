@@ -7,6 +7,8 @@ import kotlin.reflect.KParameter
 import kotlin.reflect.full.findAnnotation
 import kotlin.reflect.full.valueParameters
 
+//Endpoint - Ade não sabe programar
+
 class Endpoint(
     val path: String,
     val instance: Any,
