@@ -61,6 +61,26 @@ fun filter(predicate: (String, JsonValue) -> Boolean): JsonObject
 Essas operações devolvem sempre uma nova instância, sem alterar o original.
 
 ---
+## Inferência Dinâmica (Fase 2)
+
+A biblioteca inclui uma função extra para converter objetos Kotlin comuns automaticamente em `JsonValue`:
+
+```kotlin
+fun inferJsonValue(any: Any?): JsonValue
+```
+
+Esta função aceita:
+- Strings → `JsonString`
+- Números (Int, Double, etc.) → `JsonNumber`
+- Booleanos → `JsonBoolean`
+- `null` → `JsonNull`
+- Listas → `JsonArray`
+- Mapas com chaves `String` → `JsonObject`
+- Data classes (recursivamente) → `JsonObject`
+
+Se o tipo não for suportado, a função lança `IllegalArgumentException`.
+
+---
 
 ## Testes
 
