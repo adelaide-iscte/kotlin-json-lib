@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="jsonlib.GetJsonTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-08T02:31:27" hostname="POLARISING-P408" time="0.042">
+  <properties/>
+  <testcase name="testEchoEndpoint()" classname="jsonlib.GetJsonTest" time="0.034"/>
+  <testcase name="testSomaEndpoint()" classname="jsonlib.GetJsonTest" time="0.004"/>
+  <testcase name="testHelloEndpoint()" classname="jsonlib.GetJsonTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
