@@ -6,6 +6,17 @@ import java.util.concurrent.Executors
 import kotlin.reflect.KClass
 import kotlin.reflect.full.functions
 
+/**
+ * Pequeno servidor HTTP que permite criar endpoints a partir de funções Kotlin.
+ *
+ * A ideia é passar uma ou mais classes com funções anotadas com @Mapping,
+ * e o servidor trata de ligar essas funções a rotas HTTP.
+ *
+ * Quando alguém acede à rota no browser, a função é chamada automaticamente
+ * e a resposta é enviada em formato JSON.
+ *
+ * @param controllers Lista de classes com funções que queremos expor como endpoints
+ */
 class GetJson(vararg controllers: KClass<*>) {
     private val endpoints = mutableListOf<Endpoint>()
 
@@ -28,6 +39,14 @@ class GetJson(vararg controllers: KClass<*>) {
         }
     }
 
+    /**
+     * Arranca o servidor na porta indicada. Fica à espera de pedidos GET.
+     *
+     * Cada pedido é tratado por uma thread e, se corresponder a uma rota conhecida,
+     * devolve o resultado da função em JSON.
+     *
+     * @param port Número da porta (ex: 8081)
+     */
     fun start(port: Int) {
         val server = ServerSocket(port)
         val pool = Executors.newCachedThreadPool()
@@ -40,6 +59,14 @@ class GetJson(vararg controllers: KClass<*>) {
         }
     }
 
+    /**
+     * Trata de um pedido HTTP vindo do cliente.
+     *
+     * Verifica se é GET, extrai a rota e os parâmetros, chama o endpoint correspondente
+     * e devolve a resposta em JSON. Se não encontrar a rota, responde 404.
+     *
+     * @param socket A ligação com o cliente (browser ou curl)
+     */
     private fun handleClient(socket: Socket) {
         socket.use {
             val reader = it.getInputStream().bufferedReader()

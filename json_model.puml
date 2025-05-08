@@ -40,4 +40,10 @@ JsonNull --|> JsonValue
 JsonArray --|> JsonValue
 JsonObject --|> JsonValue
 
+' Composição: JsonArray tem vários JsonValues
+JsonArray "1" *-- "0..*" JsonValue : elements
+
+' Composição: JsonObject tem vários JsonValues
+JsonObject "1" *-- "0..*" JsonValue : properties
+
 @enduml

@@ -81,6 +81,55 @@ Esta função aceita:
 Se o tipo não for suportado, a função lança `IllegalArgumentException`.
 
 ---
+## Exposição via HTTP GET (Fase 3)
+
+A biblioteca também permite expor métodos Kotlin como endpoints HTTP GET, semelhante ao estilo de frameworks como Spring.
+
+### Anotações
+
+São usadas duas anotações para definir a estrutura dos endpoints:
+
+- `@Mapping(path: String)`: Aplica-se a classes (definindo o prefixo) e a métodos (definindo o sufixo).
+- `@Param(name: String)`: Aplica-se aos parâmetros da função, indicando o nome esperado na query string.
+
+### Exemplo de Controlador
+
+```kotlin
+@Mapping("/api")
+class TestController {
+
+    @Mapping("/hello")
+    fun hello(): String = "Olá, mundo!"
+
+    @Mapping("/eco")
+    fun echo(@Param("msg") mensagem: String): String = "Eco: $mensagem"
+
+    @Mapping("/soma")
+    fun soma(@Param("a") a: String, @Param("b") b: String): Int =
+        a.toInt() + b.toInt()
+}
+```
+
+### Inicialização
+
+```kotlin
+val api = GetJson(TestController::class)
+api.start(8080)
+```
+
+Depois disso, é possível fazer chamadas HTTP GET como:
+
+```
+GET /api/hello
+GET /api/eco?msg=oi
+GET /api/soma?a=2&b=3
+```
+
+### Serialização Automática
+
+Os valores de retorno são convertidos automaticamente para `JsonValue` com a função `inferJsonValue`, o que garante compatibilidade com o formato JSON.
+
+---
 
 ## Testes
 

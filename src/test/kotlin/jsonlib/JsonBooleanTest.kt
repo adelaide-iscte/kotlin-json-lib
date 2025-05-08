@@ -8,7 +8,7 @@ class JsonBooleanTest {
     @Test
     fun testTrue() {
         val b = JsonBoolean(true)
-        assertEquals("true", b.toJsonString())
+        assertEquals("tru", b.toJsonString())
     }
 
     @Test
