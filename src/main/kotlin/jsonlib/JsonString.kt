@@ -5,7 +5,7 @@ package jsonlib
  *
  * @param value O conteúdo da string.
  */
-data class JsonString(val value: String) : JsonValue() {
+data class JsonString(val value: String) : JsonValue {
 
     /**
      * Converte a string para uma um JSON válido.

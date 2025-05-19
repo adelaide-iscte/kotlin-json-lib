@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jsonlib.JsonObjectTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-05-08T02:31:28" hostname="POLARISING-P408" time="0.002">
+<testsuite name="jsonlib.JsonObjectTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-05-19T17:46:19" hostname="YOTSUBA-PC" time="0.001">
   <properties/>
   <testcase name="testToJsonString()" classname="jsonlib.JsonObjectTest" time="0.0"/>
   <testcase name="testFilter()" classname="jsonlib.JsonObjectTest" time="0.001"/>

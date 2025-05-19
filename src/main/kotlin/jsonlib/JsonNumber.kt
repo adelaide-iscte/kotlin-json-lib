@@ -5,7 +5,7 @@ package jsonlib
  *
  * @param value O número a armazenar.
  */
-data class JsonNumber(val value: Number) : JsonValue() {
+data class JsonNumber(val value: Number) : JsonValue {
 
     /**
      * Converte o número para string no formato JSON.

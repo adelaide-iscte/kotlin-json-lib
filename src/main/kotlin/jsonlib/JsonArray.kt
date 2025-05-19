@@ -5,7 +5,7 @@ package jsonlib
  *
  * @param elements Lista de elementos JSON.
  */
-data class JsonArray(val elements: List<JsonValue>) : JsonValue() {
+data class JsonArray(val elements: List<JsonValue>) : JsonValue {
 
     /**
      * Converte o array para uma string JSON.

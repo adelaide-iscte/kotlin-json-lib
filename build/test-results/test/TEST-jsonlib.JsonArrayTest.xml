@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jsonlib.JsonArrayTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-08T02:31:27" hostname="POLARISING-P408" time="0.022">
+<testsuite name="jsonlib.JsonArrayTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-19T17:46:19" hostname="YOTSUBA-PC" time="0.007">
   <properties/>
-  <testcase name="testMapDoubledNumbers()" classname="jsonlib.JsonArrayTest" time="0.017"/>
-  <testcase name="testFilterEvenNumbers()" classname="jsonlib.JsonArrayTest" time="0.001"/>
-  <testcase name="testToJsonString()" classname="jsonlib.JsonArrayTest" time="0.002"/>
+  <testcase name="testMapDoubledNumbers()" classname="jsonlib.JsonArrayTest" time="0.006"/>
+  <testcase name="testFilterEvenNumbers()" classname="jsonlib.JsonArrayTest" time="0.0"/>
+  <testcase name="testToJsonString()" classname="jsonlib.JsonArrayTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

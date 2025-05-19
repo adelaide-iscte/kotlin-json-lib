@@ -5,7 +5,7 @@ package jsonlib
  *
  * @param value Valor booleano.
  */
-data class JsonBoolean(val value: Boolean) : JsonValue() {
+data class JsonBoolean(val value: Boolean) : JsonValue {
 
     /**
      * Converte o booleano para string no formato JSON.

@@ -6,7 +6,7 @@ package jsonlib
 
 // Tem sempre o mesmo valor, então vamos criar como um object
 
-data object JsonNull : JsonValue() {
+data object JsonNull : JsonValue {
 
     /**
      * Converte para a string "null".

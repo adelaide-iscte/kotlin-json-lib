@@ -5,7 +5,7 @@ package jsonlib
  *
  * @param properties Mapa de chaves para valores JSON.
  */
-data class JsonObject(val properties: Map<String, JsonValue>) : JsonValue() {
+data class JsonObject(val properties: Map<String, JsonValue>) : JsonValue {
 
     /**
      * Converte o objeto para string JSON.
