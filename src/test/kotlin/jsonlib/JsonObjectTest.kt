@@ -15,7 +15,12 @@ class JsonObjectTest {
             )
         )
 
-        val expected = """{"name":"John Meow","age":55,"active":true}"""
+        val expected =
+            "{\n" +
+                "   \"name\": \"John Meow\",\n" +
+                "   \"age\": 55,\n" +
+                "   \"active\": true" +
+            "\n}"
         assertEquals(expected, obj.toJsonString())
     }
 
@@ -31,7 +36,11 @@ class JsonObjectTest {
 
         val filtered = obj.filter { key, _ -> key != "gold" }
 
-        val expected = """{"bronze":1,"silver":2}"""
+        val expected =
+            "{\n" +
+            "   \"bronze\": 1,\n" +
+            "   \"silver\": 2" +
+            "\n}"
         assertEquals(expected, filtered.toJsonString())
     }
 }

@@ -8,7 +8,7 @@ class JsonArrayTest {
     @Test
     fun testToJsonString() {
         val array = JsonArray(listOf(JsonNumber(1), JsonString("hello"), JsonBoolean(true)))
-        val expected = """[1,"hello",true]"""
+        val expected = "[1,\"hello\",true]"
         assertEquals(expected, array.toJsonString())
     }
 

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jsonlib.JsonNumberTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-19T17:46:19" hostname="YOTSUBA-PC" time="0.001">
-  <properties/>
-  <testcase name="testIntNumber()" classname="jsonlib.JsonNumberTest" time="0.0"/>
-  <testcase name="testNegativeNumber()" classname="jsonlib.JsonNumberTest" time="0.0"/>
-  <testcase name="testDoubleNumber()" classname="jsonlib.JsonNumberTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
