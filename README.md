@@ -26,7 +26,10 @@ val obj = JsonObject(
 )
 
 println(obj.toJsonString())
-// {"name":"Ana","age":22}
+// {
+//    "name": "Ana",
+//    "age": 22
+// }
 ```
 
 ## Testes
