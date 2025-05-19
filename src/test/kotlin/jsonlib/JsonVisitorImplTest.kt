@@ -9,6 +9,7 @@ class JsonVisitorImplTest {
     @Test
     fun testVisImpl(){
         val visitor = JsonVisitorImpl()
-        assertEquals("", "")
+        val visitor1 = JsonVisitorImpl()
+        assertEquals(visitor, visitor1)
     }
 }
