@@ -4,7 +4,7 @@ import jsonlib.visitor.JsonVisitor
 import jsonlib.visitor.Visitable
 
 /**
- * Representa o valor JSON nulo.
+ * Representa o tipo JSON nulo.
  */
 
 // Tem sempre o mesmo valor, então vamos criar como um object
