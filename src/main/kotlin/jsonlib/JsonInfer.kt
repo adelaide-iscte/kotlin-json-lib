@@ -1,5 +1,6 @@
 package jsonlib
 
+import jsonlib.jsonTypeObjects.*
 import kotlin.reflect.full.memberProperties
 import kotlin.reflect.full.primaryConstructor
 

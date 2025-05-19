@@ -1,4 +1,4 @@
-package jsonlib
+package jsonlib.jsonTypeObjects
 
 /**
  * Classe base para todos os tipos de valor JSON.
