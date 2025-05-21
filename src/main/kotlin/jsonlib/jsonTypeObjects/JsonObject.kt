@@ -1,17 +1,25 @@
 package jsonlib.jsonTypeObjects
 
 import jsonlib.visitor.JsonVisitor
-import jsonlib.visitor.Visitable
 
 /**
  * Representa um objeto JSON.
  *
  * @param properties Mapa de chaves para valores JSON.
  */
-data class JsonObject(val properties: Map<String, JsonValue>) : JsonValue, Visitable {
+
+data class JsonObject(val properties: Map<String, JsonValue>) : JsonValue {
+
+    /**
+     * Converte o número para string no formato JSON.
+     */
 
     override fun toJsonString(): String =
         toJsonString("   ",0)
+
+    /**
+     * TODO
+     */
 
     override fun accept(visitor: JsonVisitor) {
         return visitor.visit(this)
@@ -19,6 +27,8 @@ data class JsonObject(val properties: Map<String, JsonValue>) : JsonValue, Visit
 
     /**
      * Converte o objeto para o formato de "pretty" string JSON.
+     * @param indent: Representa a identação ("tab")
+     * @param level: Representa o nível hierárquico
      */
 
     private fun toJsonString(indent: String, level: Int): String =
@@ -45,6 +55,7 @@ data class JsonObject(val properties: Map<String, JsonValue>) : JsonValue, Visit
     /**
      * Retorna um novo JsonObject com os que passam no predicado.
      */
+
     fun filter(predicate: (String, JsonValue) -> Boolean): JsonObject =
         JsonObject(properties.filter { (key, value) -> predicate(key, value) })
 

@@ -1,14 +1,13 @@
 package jsonlib.jsonTypeObjects
 
 import jsonlib.visitor.JsonVisitor
-import jsonlib.visitor.Visitable
 
 /**
  * Representa um array JSON.
  *
  * @param elements Lista de elementos JSON.
  */
-data class JsonArray(val elements: List<JsonValue>) : JsonValue, Visitable {
+data class JsonArray(val elements: List<JsonValue>) : JsonValue {
 
     /**
      * Converte o array para uma string JSON.
@@ -16,6 +15,9 @@ data class JsonArray(val elements: List<JsonValue>) : JsonValue, Visitable {
     override fun toJsonString(): String =
         elements.joinToString(prefix = "[", postfix = "]", separator = ",") { it.toJsonString() }
 
+    /**
+     * TODO
+     */
     override fun accept(visitor: JsonVisitor) {
         return visitor.visit(this)
     }

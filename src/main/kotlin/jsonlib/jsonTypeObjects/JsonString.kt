@@ -1,14 +1,13 @@
 package jsonlib.jsonTypeObjects
 
 import jsonlib.visitor.JsonVisitor
-import jsonlib.visitor.Visitable
 
 /**
  * Representa um valor JSON do tipo string.
  *
  * @param value O conteúdo da string.
  */
-data class JsonString(val value: String) : JsonValue, Visitable {
+data class JsonString(val value: String) : JsonValue {
 
     /**
      * Converte a string para uma um JSON válido.
@@ -19,6 +18,10 @@ data class JsonString(val value: String) : JsonValue, Visitable {
             .replace("\"", "\\\"") +
                 "\""
     }
+
+    /**
+     * TODO
+     */
 
     override fun accept(visitor: JsonVisitor) {
         return visitor.visit(this)
