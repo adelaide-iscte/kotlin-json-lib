@@ -16,7 +16,11 @@ data class JsonBoolean(val value: Boolean) : JsonValue {
     override fun toJsonString(): String = value.toString()
 
     /**
-     * TODO
+     * Aceita um visitante que implementa o padrão Visitor.
+     *
+     * Permite aplicar uma operação externa ao valor booleano.
+     *
+     * @param visitor o visitante a aplicar.
      */
 
     override fun accept(visitor: JsonVisitor) {

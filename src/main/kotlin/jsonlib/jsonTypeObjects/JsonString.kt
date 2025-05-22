@@ -20,7 +20,11 @@ data class JsonString(val value: String) : JsonValue {
     }
 
     /**
-     * TODO
+     * Aceita um visitante que implementa o padrão Visitor.
+     *
+     * Permite aplicar uma operação externa à string JSON.
+     *
+     * @param visitor o visitante a aplicar.
      */
 
     override fun accept(visitor: JsonVisitor) {

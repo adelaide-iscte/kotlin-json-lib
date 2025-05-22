@@ -16,7 +16,11 @@ data object JsonNull : JsonValue {
     override fun toJsonString(): String = "null"
 
     /**
-     * TODO
+     * Aceita um visitante que implementa o padrão Visitor.
+     *
+     * Permite aplicar uma operação externa ao valor nulo.
+     *
+     * @param visitor o visitante a aplicar.
      */
     override fun accept(visitor: JsonVisitor) {
         return visitor.visit(this)

@@ -16,7 +16,10 @@ data class JsonArray(val elements: List<JsonValue>) : JsonValue {
         elements.joinToString(prefix = "[", postfix = "]", separator = ",") { it.toJsonString() }
 
     /**
-     * TODO
+     * Aceita um visitante que implementa o padrão Visitor.
+     *
+     * Este método permite aplicar operações externas ao conteúdo do array
+     * sem modificar a sua estrutura, de forma recursiva.
      */
     override fun accept(visitor: JsonVisitor) {
         return visitor.visit(this)
