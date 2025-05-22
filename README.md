@@ -16,7 +16,7 @@ Criar uma biblioteca simples que permita construir, transformar e converter dado
 - Suporte a API HTTP simples usando anotações como `@Mapping` e `@Param`
 - Tudo é imutável
 - Testes com JUnit
-- KDoc em todas as classes públicas
+- KDoc em todas as classes.
 
 ## Exemplo
 
