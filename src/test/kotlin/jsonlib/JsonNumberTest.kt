@@ -1,5 +1,6 @@
 package jsonlib
 
+import jsonlib.jsonTypeObjects.JsonNumber
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

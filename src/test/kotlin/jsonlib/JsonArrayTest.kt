@@ -1,5 +1,9 @@
 package jsonlib
 
+import jsonlib.jsonTypeObjects.JsonArray
+import jsonlib.jsonTypeObjects.JsonBoolean
+import jsonlib.jsonTypeObjects.JsonNumber
+import jsonlib.jsonTypeObjects.JsonString
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -8,7 +12,7 @@ class JsonArrayTest {
     @Test
     fun testToJsonString() {
         val array = JsonArray(listOf(JsonNumber(1), JsonString("hello"), JsonBoolean(true)))
-        val expected = """[1,"hello",true]"""
+        val expected = "[1,\"hello\",true]"
         assertEquals(expected, array.toJsonString())
     }
 

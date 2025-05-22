@@ -1,7 +1,8 @@
 package jsonlib
 
-import kotlin.reflect.*
-import kotlin.reflect.full.*
+import jsonlib.jsonTypeObjects.*
+import kotlin.reflect.full.memberProperties
+import kotlin.reflect.full.primaryConstructor
 
 /**
  * Infere automaticamente uma instância de [JsonValue] a partir de qualquer objeto Kotlin.

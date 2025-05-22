@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jsonlib.JsonInferTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-05-08T02:31:27" hostname="POLARISING-P408" time="0.064">
+<testsuite name="jsonlib.JsonInferTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-19T20:10:41" hostname="YOTSUBA-PC" time="0.255">
   <properties/>
-  <testcase name="testInferDataClass()" classname="jsonlib.JsonInferTest" time="0.043"/>
-  <testcase name="testInferBoolean()" classname="jsonlib.JsonInferTest" time="0.0"/>
-  <testcase name="testInferNumber()" classname="jsonlib.JsonInferTest" time="0.001"/>
-  <testcase name="testInferString()" classname="jsonlib.JsonInferTest" time="0.001"/>
-  <testcase name="testInferMap()" classname="jsonlib.JsonInferTest" time="0.001"/>
-  <testcase name="testInferNestedDataClass()" classname="jsonlib.JsonInferTest" time="0.009"/>
-  <testcase name="testInferList()" classname="jsonlib.JsonInferTest" time="0.001"/>
-  <testcase name="testInferNull()" classname="jsonlib.JsonInferTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testInferNestedDataClass()" classname="jsonlib.JsonInferTest" time="0.255"/>
+  <system-out><![CDATA[{
+   "name": "Adelaide",
+   "address": {
+      "city": "Setúbal"
+   }
+}
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

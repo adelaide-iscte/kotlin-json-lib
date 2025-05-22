@@ -38,14 +38,24 @@ class JsonInferTest {
     @Test
     fun testInferMap() {
         val json = inferJsonValue(mapOf("bronze" to 1, "iron" to "xyz"))
-        assertEquals("{\"bronze\":1,\"iron\":\"xyz\"}", json.toJsonString())
+        val expected =
+            "{\n" +
+                "   \"bronze\": 1,\n" +
+                "   \"iron\": \"xyz\"" +
+            "\n}"
+        assertEquals(expected, json.toJsonString())
     }
 
     @Test
     fun testInferDataClass() {
         data class User(val name: String, val active: Boolean)
         val json = inferJsonValue(User("Pedro", true))
-        assertEquals("{\"name\":\"Pedro\",\"active\":true}", json.toJsonString())
+        val expected =
+            "{\n" +
+                "   \"name\": \"Pedro\",\n" +
+                "   \"active\": true" +
+            "\n}"
+        assertEquals(expected, json.toJsonString())
     }
 
     @Test
@@ -54,9 +64,17 @@ class JsonInferTest {
         data class Person(val name: String, val address: Address)
 
         val json = inferJsonValue(Person("Adelaide", Address("Setúbal")))
-        assertEquals(
-            "{\"name\":\"Adelaide\",\"address\":{\"city\":\"Setúbal\"}}",
-            json.toJsonString()
-        )
+
+        val expected =
+            "{\n" +
+            "   \"name\": \"Adelaide\",\n" +
+            "   \"address\": {\n" +
+            "      \"city\": \"Setúbal\"\n" +
+            "   }" +
+            "\n}"
+
+        println(json.toJsonString())
+
+        assertEquals(expected, json.toJsonString())
     }
 }

@@ -1,6 +1,6 @@
 package jsonlib.getjson
 
-import jsonlib.JsonValue
+import jsonlib.jsonTypeObjects.JsonValue
 import jsonlib.inferJsonValue
 import kotlin.reflect.KFunction
 import kotlin.reflect.KParameter
